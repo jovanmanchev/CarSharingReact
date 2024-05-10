@@ -1,0 +1,223 @@
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+
+
+    position: absolute;
+    width: 1112px;
+    height: 580px;
+    left: 400px;
+    top: 104px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+   
+}
+.stack{
+    /* <Stack> */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    width: 1032px;
+    height: 314px;
+
+    background: #FFFFFF;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.title{
+        /* John Smith */
+
+    width: 964px;
+    height: 42px;
+
+    /* typography/h4 */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 123.5%;
+    /* identical to box height, or 42px */
+    letter-spacing: 0.25px;
+
+    color: rgba(0, 0, 0, 0.87);
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+   
+
+}
+
+.header{
+    /* <CardHeader> */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 60px 16px 16px;
+
+    width: 1112px;
+    height: 176px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.card-content{
+    /* <CardContent> */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 40px;
+
+        width: 1112px;
+        height: 346px;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 3;
+        align-self: stretch;
+        flex-grow: 0;
+
+}
+
+.rating-text{
+        /* body1 */
+
+    
+
+    /* typography/h6 */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 160%;
+    /* identical to box height, or 32px */
+    letter-spacing: 0.15px;
+
+    color: rgba(0, 0, 0, 0.87);
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.text-field{
+    /* <TextField> | Multiline
+
+    Sizes, states and other props can be set from the inside TextField component.
+    */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 1000px;
+    height: 56px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.submit-button{
+        /* <Button>
+
+    import Button from &#39;@mui/material/Button&#39;;
+    
+    export default function ButtonDemo() {
+    return (
+    &lt;Button
+        variant=&quot;contained&quot;
+        color=&quot;primary&quot;
+        size=&quot;large&quot;&gt;
+        Label
+    &lt;/Button&gt;
+    );
+    }
+    */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+
+
+
+    background: #2196F3;
+    /* elevation/2 */
+
+    border-radius: 4px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    /* Button */
+
+
+
+    /* button/large */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    /* identical to box height, or 173% */
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    margin: 10px;
+
+
+}
