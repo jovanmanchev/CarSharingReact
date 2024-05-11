@@ -1,0 +1,12 @@
+.search-filters input[type="text"], .search-filters input[type="datetime-local"] {
+    padding: 8px;
+    margin-right: 5px;
+}
+
+.search-filters button {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
