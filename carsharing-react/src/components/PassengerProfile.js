@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/card.css'
-const Profile = ({ passengerId }) => {
+import { useParams } from 'react-router-dom';
+const Profile = () => {
+    const { passengerId } = useParams();
     const [passenger, setPassenger] = useState(null);
 
     const [bio, setBio] = useState("");
