@@ -3,6 +3,7 @@ import Profile from './components/PassengerProfile';
 import Layout from './components/Layout';
 import RidesList from './components/RideList';
 import RidesWrapper from './components/RidesWrapper'
+import RidesForDriver from './components/RidesForDriver';
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
@@ -13,7 +14,7 @@ function App() {
            
               <Route path="/passenger/:passengerId" element={<Profile />} />
               <Route path="/rides" element={<RidesWrapper />} />
-
+              <Route path="/ridesForDriver/:driverId" element={<RidesForDriver />} />
         </Routes>
         </Layout>
     

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/ride.css'
+import dayjs from 'dayjs'; 
 const Ride = ({ ride }) => {
     const { locationFrom, locationTo, timeFrom, pricePerPerson } = ride;
 
