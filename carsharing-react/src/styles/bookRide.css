@@ -1,0 +1,46 @@
+.ride-details {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.route-timeline {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.ride-info, .driver-info, .preferences {
+    margin-bottom: 20px;
+}
+
+.driver-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.driver-info div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.preferences ul {
+    list-style: none;
+    padding: 0;
+}
+
+.preferences li {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}

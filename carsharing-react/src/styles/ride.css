@@ -9,3 +9,9 @@
 .time-location span, .price span {
     font-weight: bold;
 }
+.not-found-text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}

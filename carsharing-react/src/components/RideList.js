@@ -89,8 +89,7 @@ const RidesList = () => {
             }
 
             result = result.filter(ride => {
-                // Time filter application...
-                // Applying preferences filters
+              
                 return Object.entries(preferences).every(([key, enabled]) => {
                     return enabled ? ride[key] : true;
                 });
@@ -123,9 +122,17 @@ const RidesList = () => {
             <button onClick={fetchRides}>Search</button>
         </div>
 
-            {filteredRides.map(ride => (
-                <Ride key={ride.id} ride={ride} />
-            ))}
+        {filteredRides.length > 0 ? (
+        filteredRides.map(ride => (
+            <Ride key={ride.id} ride={ride} />
+        ))
+            ) : (
+                <div className="no-rides">
+                     <p className='not-found-text'>No results found</p>
+                    <img src="undraw_not_found_re_bh2e.png" alt="No Rides Found" />
+                   
+                </div>
+            )}
         </div>
     );
 };

@@ -4,9 +4,9 @@ import axios from 'axios';
 import dayjs from 'dayjs';
 import "../styles/modal.css"
 
-Modal.setAppElement('#root'); // This line of code is necessary for screen readers
+Modal.setAppElement('#root'); 
 
-const CreateRideModal = ({ driverId, isOpen, onClose }) => {
+const CreateRideModal = ({ driverId, isOpen, onClose, onRideCreated }) => {
     const [rideDetails, setRideDetails] = useState({
         locationFrom: '',
         locationTo: '',
@@ -40,7 +40,7 @@ const CreateRideModal = ({ driverId, isOpen, onClose }) => {
             if(hostname == 'localhost')
             hostname += ":8080";
             const response = await axios.post(`http://${hostname}/api/drivers/createRide/${driverId}`, data);
-            console.log('Ride created:', response.data);
+            onRideCreated();
             onClose(); 
         } catch (error) {
             console.error('Failed to create ride', error);
