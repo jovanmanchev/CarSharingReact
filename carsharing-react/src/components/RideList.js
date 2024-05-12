@@ -121,7 +121,7 @@ const RidesList = () => {
             />
             <button onClick={fetchRides}>Search</button>
         </div>
-
+        
         {filteredRides.length > 0 ? (
         filteredRides.map(ride => (
             <Ride key={ride.id} ride={ride} />
