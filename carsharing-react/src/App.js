@@ -7,18 +7,27 @@ import RidesForDriver from './components/RidesForDriver';
 import BookRide from './components/BookRide';
 import DriverProfile from './components/DriverProfile';
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom';
+import PassengerRequests from './components/PassengerRequests';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import YourRides from './components/PassengerRides';
+import PassengerUpcomingRides from './components/PassengerUpcomingRides';
+import PassengerPastRides from './components/PassengerPastRides';
+
 function App() {
   return (
     <Router>
     <Layout>
-        <Routes>
-           
+        <Routes> 
+              <Route path={`/passenger/:passengerId/requests`} element={<PassengerRequests/>} /> 
               <Route path="/passenger/:passengerId" element={<Profile />} />
               <Route path="/driver/:driverId" element={<DriverProfile />} />
               <Route path="/rides" element={<RidesWrapper />} />
               <Route path="/ridesForDriver/:driverId" element={<RidesForDriver />} />
               <Route path="/book-ride/:rideId" element={<BookRide/>} />
+              <Route path="/your-rides/:passengerId/upcoming" element={<PassengerUpcomingRides/>} />
+              <Route path="/your-rides/:passengerId/past" element={<PassengerPastRides/>} />
+              <Route path="/your-rides/:passengerId" element={<PassengerUpcomingRides/>}/>
         </Routes>
         </Layout>
     
