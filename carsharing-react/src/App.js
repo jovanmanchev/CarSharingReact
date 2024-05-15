@@ -13,6 +13,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import YourRides from './components/PassengerRides';
 import PassengerUpcomingRides from './components/PassengerUpcomingRides';
 import PassengerPastRides from './components/PassengerPastRides';
+import HowItWorks from './components/HowItWorks';
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
               <Route path="/your-rides/:passengerId/upcoming" element={<PassengerUpcomingRides/>} />
               <Route path="/your-rides/:passengerId/past" element={<PassengerPastRides/>} />
               <Route path="/your-rides/:passengerId" element={<PassengerUpcomingRides/>}/>
+              <Route path="/how-it-works" element={<HowItWorks/>}/>
+              <Route path="/about-us" element={<AboutUs/>}/>
         </Routes>
         </Layout>
     

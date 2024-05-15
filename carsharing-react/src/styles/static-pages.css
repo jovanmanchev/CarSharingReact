@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  .about-us {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .n-container {
+    margin-top: 100px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .how-it-works-content {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .how-it-works-content img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h4 {
+    color: darkblue;
+    margin-top: 30px;
+  }
+  
