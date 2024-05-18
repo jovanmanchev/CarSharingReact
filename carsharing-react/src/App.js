@@ -15,6 +15,9 @@ import PassengerUpcomingRides from './components/PassengerUpcomingRides';
 import PassengerPastRides from './components/PassengerPastRides';
 import HowItWorks from './components/HowItWorks';
 import AboutUs from './components/AboutUs';
+import Login from "./components/Login";
+import Register from './components/Register';
+
 
 function App() {
   return (
@@ -32,6 +35,8 @@ function App() {
               <Route path="/your-rides/:passengerId" element={<PassengerUpcomingRides/>}/>
               <Route path="/how-it-works" element={<HowItWorks/>}/>
               <Route path="/about-us" element={<AboutUs/>}/>
+              <Route path="/login" element={<Login/>}/>
+              <Route path="/register" element={<Register/>}/>
         </Routes>
         </Layout>
     
