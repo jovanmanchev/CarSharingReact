@@ -13,32 +13,33 @@ const Filters = () => {
 
 
     return (
-        <div className="filters">
-            <h3>Departure time</h3>
+        <div className="filters mx-5">
+            <h4><b>Departure time</b></h4>
             {Object.values(timeFilters).map(filter => (
                 <div>
                 <label key={filter}>
-                    <input type="checkbox" checked={timeFilter === filter} onChange={() => handleTimeFilterChange(filter)} />
+                    <input className='m-2' type="checkbox" checked={timeFilter === filter} onChange={() => handleTimeFilterChange(filter)} />
                     {filter}
                 </label>
                 </div>
             ))}
-            <h3>Sort By</h3>
+            <h4><b>Sort By</b></h4>
             <div>
                 <div>
-                    <input type="radio" name="sortOption" onChange={() => handleSortOptionChange('price')} />
+                    <input className='m-2' type="radio" name="sortOption" onChange={() => handleSortOptionChange('price')} />
                     By Price
                 </div>
                 <div>
-                    <input type="radio" name="sortOption" onChange={() => handleSortOptionChange('earliest')} />
+                    <input className='m-2' type="radio" name="sortOption" onChange={() => handleSortOptionChange('earliest')} />
                     Earliest Departure
                 </div>
             </div>
-            <h3>Other</h3>
+            <h4><b>Other</b></h4>
             {Object.entries(preferences).map(([key, value]) => (
                 <div>
                 <label key={key}>
                     <input
+                        className='m-2'
                         type="checkbox"
                         checked={value}
                         onChange={() => togglePreference(key)}

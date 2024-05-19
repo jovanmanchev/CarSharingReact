@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/bookRide.css'
 import dayjs from 'dayjs';
+import Ride from './Ride';
+
 const BookRide = () => {
     const { rideId } = useParams();
     const navigate  = useNavigate();
@@ -49,24 +51,16 @@ const BookRide = () => {
         return <div>Loading...</div>; 
     }
     return (
-       
+       <div className='BookRideContainer'>
+            <h3 className='bookRideTitle text-primary my-3'>Book ride:</h3>
                 <div className='ride-details'>
-                <div className="route-timeline">
-                    <span>{dayjs(ride.timeFrom).format('HH:mm')} → {ride.locationFrom} - {ride.locationTo}</span>
-                </div>
-                <div className="ride-info">
-                    <p>{ride.pricePerPerson} den</p>
-                    <p>{dayjs(ride.timeFrom).format('DD/MM/YYYY HH:mm')}</p>
-                </div>
-                <div className="driver-info">
-                    
-                    <div>
+                    <Ride key={ride.id} ride={ride}></Ride>                  
+                    <div className='driver-info'>
                         <strong>{ride.driverNameSurname}</strong>
                         <p>{ride.driverBio}</p>
                     </div>
-                </div>
                 <div className="preferences">
-                    <p>Preferences</p>
+                    <strong>Preferences</strong>
                     <ul>
                         <li>Chattiness: {ride.chattiness ? '✔' : '✖'}</li>
                         <li>Smoking: {ride.smoking ? '✔' : '✖'}</li>
@@ -76,7 +70,7 @@ const BookRide = () => {
                 </div>
                 <button onClick={handleSendRequest}>Send Request</button>
             </div>
-      
+        </div>
     );
 };
 

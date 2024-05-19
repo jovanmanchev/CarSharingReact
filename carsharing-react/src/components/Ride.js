@@ -23,7 +23,7 @@ const Ride = ({ ride }) => {
                     <div className="time">{formatDate(timeFrom)}</div>
                     <div className="circle"></div>
                     <div className="details">{locationFrom}</div>
-                    <div className="price">{pricePerPerson} den</div>
+                    <div className="price"><b>{pricePerPerson} den</b></div>
                 </div>
                 <div className="event">
                 <div className="line"></div>
@@ -33,7 +33,6 @@ const Ride = ({ ride }) => {
                     
                     <div className="details">{locationTo}</div>
                     <div className="price">{driverNameSurname}</div>
-                    
                 </div>
             </div>
     </div>

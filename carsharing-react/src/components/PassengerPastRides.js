@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 import YourRides from "./PassengerRides";
-
+import Ride from './Ride';
 
 const PassengerPastRides = () => {
     const { passengerId } = useParams();
@@ -23,26 +23,27 @@ const PassengerPastRides = () => {
     };
 
     return (
-        <div>
-            <YourRides></YourRides>
-            <div>
-            <h2 className="p-3">Past rides</h2>
-            <ul>
-                {pastRides.map(ride => (
-                    <li key={ride.id} className="card">
-                        <div className='card-header'>{ride.locationFrom} - {ride.locationTo}</div>
-                        <div><strong>Departure:</strong> {ride.timeFrom}</div>
-                        <div><strong>Arrival:</strong> {ride.timeTo}</div>
-                        <div><strong>Driver:</strong> {ride.driverNameSurname}</div>
-                        <div><strong>Status:</strong> {ride.rideStatus}</div>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <div className="container-fluid">
+            <div className="row ">
+                <div className="col-md-3">
+                    <YourRides></YourRides>
+                </div>
+                <div className="col-md-9">
+                    <h2 className="my-3 text-primary">Past rides</h2>
+                    {pastRides.length > 0 ? (
+                        pastRides.map(ride => (
+                            <Ride key={ride.id} ride={ride} />
+                        ))
+                    ) : (
+                    <div className="no-rides">
+                         <p className='not-found-text'>No results found</p>
+                        <img src="undraw_not_found_re_bh2e.png" alt="No Rides Found" />  
+                    </div>
+                    )}
+                </div>
+            </div>
         </div>
     );
-
-
 };
 
 export default PassengerPastRides;

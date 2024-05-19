@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/card.css'
+import '../styles/profile.css'
 import { useParams } from 'react-router-dom';
 const Profile = () => {
     const { passengerId } = useParams();
@@ -48,30 +49,23 @@ const Profile = () => {
         return <div>Loading...</div>;
     }
     return (
-        
+        <div className='profileContainer'>
             <div className="card">
-                
-                    <div className='header'>
+                    <div className='header ml-5'>
                         <h5 className="title">{passenger.firstName} {passenger.lastName}</h5>
-                        
                     </div>
                     <div className='card-content'>
                         <div >
                             <div className="rating-text">Rating: {passenger.rating || 'None'} / 5</div>
-                           
                             <div className='rating-text'>Bio</div>
                             <form onSubmit={handleSubmit}>
                                 <input placeholder='Write something...' className='text-field mt-3' value={bio} onChange={handleBioChange}/>
                                 <button type="submit" className="submit-button">Save</button>
-
                             </form>
-                          
                         </div>                    
                     </div>
-             
-               
             </div>
-        
+        </div>    
     );
 };
 

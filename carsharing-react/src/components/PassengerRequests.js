@@ -28,10 +28,13 @@ const PassengerRequests = () => {
     }
 
     return (
-        <div>
-        <YourRides/>
-        <div>
-            <h2 className="p-3">Requests</h2>
+        <div className="container-fluid">
+            <div className="row ">
+                <div className="col-md-3">
+                    <YourRides></YourRides>
+                </div>
+                <div className="col-md-9">
+                    <h2 className="my-3 text-primary">Requests</h2>
             <ul>
                 {passengerRequests.requests.map(request => (
                     <li key={request.requestId} className="card">
@@ -43,7 +46,8 @@ const PassengerRequests = () => {
                     </li>
                 ))}
             </ul>
-        </div>
+                </div>
+            </div>
         </div>
     );
 }
