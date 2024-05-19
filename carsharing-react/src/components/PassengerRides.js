@@ -9,6 +9,7 @@ const YourRides = () => {
                     <li className='nav-item'><Link className='nav-link' to={`/your-rides/${passengerId}/upcoming`}>Upcoming Rides</Link></li>
                     <li className='nav-item'><Link className='nav-link' to={`/your-rides/${passengerId}/past`}>Past Rides</Link></li>
                     <li className='nav-item'><Link className='nav-link' to={`/passenger/${passengerId}/requests`}>Requests</Link></li>
+                  
                 </ul>
     );
 };

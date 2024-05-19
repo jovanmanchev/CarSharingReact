@@ -37,7 +37,7 @@ const PassengerPastRides = () => {
                     ) : (
                     <div className="no-rides">
                          <p className='not-found-text'>No results found</p>
-                        <img src="undraw_not_found_re_bh2e.png" alt="No Rides Found" />  
+                        <img src="/undraw_not_found_re_bh2e.png" alt="No Rides Found" />  
                     </div>
                     )}
                 </div>

@@ -55,7 +55,7 @@ const Register = () => {
     const handlesubmit = (e) => {
         e.preventDefault();
         
-        let regobj = { id, name, password, email, phone,  type:  type.toUpperCase(), address, gender };
+        let regobj = { firstName:id, lastName:name, password, email, phone,  type:  type.toUpperCase(), address, gender };
         console.log(regobj);
         if (IsValidate()) {
             
@@ -114,7 +114,7 @@ const Register = () => {
                                 <div className="col-lg-6">
                                     <div className="form-group">
                                         <label>Type <span className="errmsg">*</span></label>
-                                        <select value={type} onChange={e => typeChange(e.target.value)} className="form-control">
+                                        <select  onChange={e => typeChange(e.target.value)} className="form-control">
                                             <option value="DRIVER">DRIVER</option>
                                             <option value="PASSENGER">PASSENGER</option>
                                         </select>

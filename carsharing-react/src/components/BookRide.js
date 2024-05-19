@@ -29,9 +29,12 @@ const BookRide = () => {
     }, [rideId])
 
     const handleSendRequest = async () => {
+
+        const id = localStorage.getItem('id');
+        console.log(id)
         const data = {
             rideId: parseInt(rideId, 10),
-            passengerId: 1 // Hardcoded for now, will be changed to take the passenger id when auth is added
+            passengerId: id 
         };
 
         try {
@@ -41,7 +44,7 @@ const BookRide = () => {
                 hostname += ":8080";
             await axios.post(`http://${hostname}/api/requests/requestRide`, data);
             alert('Request sent successfully!');
-            navigate ('/'); 
+            navigate ('/rides'); 
         } catch (error) {
             console.error('Error sending ride request:', error);
             alert('Failed to send request.');

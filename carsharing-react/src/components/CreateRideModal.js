@@ -63,7 +63,7 @@ const CreateRideModal = ({ driverId, isOpen, onClose, onRideCreated }) => {
                 <input type="datetime-local" name="timeTo" value={rideDetails.timeTo} onChange={handleChange} />
                 <input type="number" name="pricePerPerson" value={rideDetails.pricePerPerson} onChange={handleChange} placeholder="Price Per Person" />
                 <label>
-                    <input type="checkbox" name="chattiness" checked={rideDetails.chattiness} onChange={handleChange} />
+                    <input type="checkbox" name="chattiness" checked={rideDetails.chattiness} onChange={handleChange} className=''/>
                     Chattiness
                 </label>
                 <label>

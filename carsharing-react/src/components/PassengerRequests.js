@@ -17,13 +17,16 @@ const PassengerRequests = () => {
         try {
             
             const response = await axios.get(`http://${hostname}:8080/api/passengers/requests/${passengerId}`);
-            setPassengerRequests(response.data);
+           
+            console.log(response.data.requests)
+            setPassengerRequests(response.data.requests)
+           
         } catch (error) {
             console.error('Failed to fetch data', error);
         }
     };
     
-    if (!Array.isArray(passengerRequests.requests)) {
+    if (!Array.isArray(passengerRequests)) {
         return <div>Loading...</div>;
     }
 
@@ -36,7 +39,7 @@ const PassengerRequests = () => {
                 <div className="col-md-9">
                     <h2 className="my-3 text-primary">Requests</h2>
             <ul>
-                {passengerRequests.requests.map(request => (
+                {passengerRequests.map(request => (
                     <li key={request.requestId} className="card">
                         <div className='card-header'>{request.locationFrom} - {request.locationTo}</div>
                         <div><strong>Departure:</strong> {request.timeFrom}</div>
