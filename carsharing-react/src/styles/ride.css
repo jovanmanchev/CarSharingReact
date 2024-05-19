@@ -1,17 +1,63 @@
 .ride {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
+    width: 100%;
+   
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.time-location span, .price span {
-    font-weight: bold;
+.timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
 }
-.not-found-text{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+
+.event {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 30px;
 }
+
+.time {
+  
+    margin-right: 20px;
+}
+
+.details {
+    flex-grow: 1; 
+    margin-left: 100px;
+    position: absolute;
+}
+
+.price {
+    white-space: nowrap; 
+    margin-left: 20px; 
+}
+.circle {
+    width: 10px; 
+    height: 10px;
+    background-color: purple;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+    margin-right: 20px;
+    margin-left: 15px;
+    position: absolute;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+
+.line {
+    height: 30px;
+    width: 2px;
+    background-color: purple;
+  
+    position: absolute;
+    margin: 0;
+    left: 53px;
+    bottom: 52px;
+  }

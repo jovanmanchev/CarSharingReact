@@ -28,7 +28,7 @@ const RidesList = () => {
             hostname += ":8080";
         try{
             const response = await axios.get(`http://${hostname}/api/rides/getRides`, {});
-            
+            console.log(response.data)
             setRides(response.data.map(ride => ({
                 ...ride,
                 timeFrom: dayjs(ride.timeFrom),
@@ -121,7 +121,7 @@ const RidesList = () => {
             />
             <button onClick={fetchRides}>Search</button>
         </div>
-        
+        <div className='rides'>
         {filteredRides.length > 0 ? (
         filteredRides.map(ride => (
             <Ride key={ride.id} ride={ride} />
@@ -133,6 +133,8 @@ const RidesList = () => {
                    
                 </div>
             )}
+        </div>
+      
         </div>
     );
 };

@@ -1,13 +1,16 @@
-/* Footer.css */
+
 .footer {
+    width: 100%;
+    padding: 30px 0;
     background-color: #007BFF;
     color: white;
-    padding: 30px 0;  
-    width: 100%;
-    position: fixed;
+    position: fixed; /* or 'absolute' if you only want it at the bottom when the content doesn't fill the screen */
     bottom: 0;
     left: 0;
-   
+    z-index: 1000;
+  
+    margin-top: calc(100vh - 100% + 60px); 
+ 
 }
 
 .container {

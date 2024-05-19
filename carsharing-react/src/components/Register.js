@@ -9,7 +9,7 @@ const Register = () => {
     const [password, passwordchange] = useState("");
     const [email, emailchange] = useState("");
     const [phone, phonechange] = useState("");
-    const [country, countrychange] = useState("Choose");
+    const [type, setType] = useState("ROLE_DRIVER");
     const [address, addresschange] = useState("");
     const [gender, genderchange] = useState("female");
 
@@ -47,14 +47,19 @@ const Register = () => {
         }
         return isproceed;
     }
-
+    const typeChange = (type) => {
+        type = "ROLE_" + type;
+        setType(type)
+    }
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        let regobj = { id, name, password, email, phone, country, address, gender };
+        
+        let regobj = { id, name, password, email, phone,  type:  type.toUpperCase(), address, gender };
+        console.log(regobj);
         if (IsValidate()) {
-            //console.log(regobj);
-            fetch("http://localhost:8000/user", {
+            
+            fetch("http://localhost:8080/api/signup", {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(regobj)
@@ -109,7 +114,7 @@ const Register = () => {
                                 <div className="col-lg-6">
                                     <div className="form-group">
                                         <label>Type <span className="errmsg">*</span></label>
-                                        <select value={country} onChange={e => countrychange(e.target.value)} className="form-control">
+                                        <select value={type} onChange={e => typeChange(e.target.value)} className="form-control">
                                             <option value="DRIVER">DRIVER</option>
                                             <option value="PASSENGER">PASSENGER</option>
                                         </select>

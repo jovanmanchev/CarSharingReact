@@ -4,7 +4,9 @@
     justify-content: center; 
     align-items: start; 
     padding: 20px;
-    height: 100vh; 
+    height: 200px; 
+    flex: 1;
+
 }
 
 .filters {
@@ -19,4 +21,10 @@
     max-width: 600px; 
     padding: 20px;
     overflow-y: auto; 
+  
+}
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
 }

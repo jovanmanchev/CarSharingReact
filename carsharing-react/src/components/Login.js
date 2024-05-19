@@ -12,6 +12,8 @@ const Login = ({ setIsLoggedIn }) => {
                 email,
                 password,
             });
+           
+            localStorage.setItem('token', response.data.token);
             setIsLoggedIn(true);
         } catch (error) {
             console.error('Login failed:', error);
@@ -51,6 +53,7 @@ const Register = ({ setIsLoggedIn }) => {
                 email,
                 password,
             });
+            
             setIsLoggedIn(true);
         } catch (error) {
             console.error('Registration failed:', error);
